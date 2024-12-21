@@ -1,0 +1,19 @@
+{
+    "own-agent": "http://localhost:8081",
+    "agents": ["http://localhost:8083"],
+    "services": [
+        {
+            "name": "service-1",
+            "start-script": [
+                "echo $$",
+                "go build main.go",
+                "echo $$",
+                "./main"
+                ]
+        },
+        {
+            "name": "service-2",
+            "start-script": ["go build main.go", "./main"]
+        }
+    ]
+}
